@@ -82,14 +82,25 @@
 
 Download pre-trained models: [ResNet-50](https://drive.google.com/file/d/1FTwDMAddcLrWK8Q_yy7E1uaAMYUVvhhn/view?usp=drive_link).
 
-Download our trained models: [Chest X-ray](https://drive.google.com/file/d/1Bx-DxUPJbYd1EvqqVh984Tr1sTJGXLMC/view?usp=drive_link), [Deepglobe](https://drive.google.com/file/d/1wd-O0M6WlBSvBYeBitW73VOhz7GjGioi/view?usp=drive_link), 
+# Train
+Please modify the dataset address, then you can run:
+
+    python train.py
+
+You can also download our trained models: [Chest X-ray](https://drive.google.com/file/d/1Bx-DxUPJbYd1EvqqVh984Tr1sTJGXLMC/view?usp=drive_link), [Deepglobe](https://drive.google.com/file/d/1wd-O0M6WlBSvBYeBitW73VOhz7GjGioi/view?usp=drive_link), 
 [FSS-1000](https://drive.google.com/file/d/1buBGlMbSLFJ3M3JMwlPVIKUFM6jthud_/view?usp=drive_link) and [ISIC2018](https://drive.google.com/file/d/1lLC-CJPO8moFCR9QcyUvp01vQ2DCNn5Z/view?usp=drive_link).
 
+# Finetune
+After completing the training on the source domain, you should fine-tune the model on the four target domains respectively. Please run:
+
+    python finetune.py
 
 # Test
-Download the weights of pre-trained and our PMN, and put them in the corresponding folder. Then you can run:
+After completing the finetuning on the target domain, you can run:
 
     python test.py
+
+You can also download the weights of pre-trained and our PMN, and put them in the corresponding folder.
 
 # Performance and Visualisation
 ![image](figs/results.png) 
