@@ -86,27 +86,27 @@ def main():
     if args.dataset == 'deepglobe':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/deepglobe/resnet50_1shot_avg_35.32.pth'
+                checkpoint_path = './outdir/PMN/deepglobe/resnet50_1shot_avg_49.45.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/deepglobe/resnet50_5shot_avg_35.33.pth'
+                checkpoint_path = './outdir/PMN/deepglobe/resnet50_1shot_avg_52.23.pth'
     if args.dataset == 'isic':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/isic/resnet50_1shot_avg_46.80.pth'
+                checkpoint_path = './outdir/PMN/isic/resnet50_1shot_avg_72.33.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/isic/resnet50_5shot_avg_56.17.pth'
+                checkpoint_path = './outdir/PMN/isic/resnet50_5shot_avg_74.00.pth'
     if args.dataset == 'lung':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/lung/resnet50_1shot_avg_71.67.pth'
+                checkpoint_path = './outdir/PMN/lung/resnet50_1shot_avg_80.67.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/lung/resnet50_5shot_avg_79.33.pth'
+                checkpoint_path = './outdir/PMN/lung/resnet50_5shot_avg_80.87.pth'
     if args.dataset == 'fss':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/fss/resnet50_1shot_avg_74.90.pth'
+                checkpoint_path = './outdir/PMN/fss/resnet50_1shot_avg_79.41.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/fss/resnet50_5shot_avg_77.12.pth'
+                checkpoint_path = './outdir/PMN/fss/resnet50_5shot_avg_81.78.pth'
 
     print('Evaluating model:', checkpoint_path)
 
