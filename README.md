@@ -89,7 +89,7 @@ Download our trained models: [Chest X-ray](https://drive.google.com/file/d/1Bx-D
 # Test
 Download the weights of pre-trained and our PMN, and put them in the corresponding folder. Then you can run:
 
-    test.py
+    python test.py
 
 # Performance and Visualisation
 ![image](figs/results.png) 
