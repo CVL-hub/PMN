@@ -88,21 +88,21 @@ def main():
             if args.shot == 1:
                 checkpoint_path = './outdir/PMN/isic/train/resnet50_1shot_avg_46.81.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/isic/train/resnet50_5shot_avg_52.82.pth'
+                checkpoint_path = './outdir/PMN/isic/train/resnet50_5shot_avg_56.17.pth'
 
     if args.dataset == 'lung':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/lung/train/resnet50_1shot_avg_65.82.pth'
+                checkpoint_path = './outdir/PMN/lung/train/resnet50_1shot_avg_71.67.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/lung/train/resnet50_5shot_avg_69.92.pth'
+                checkpoint_path = './outdir/PMN/lung/train/resnet50_5shot_avg_79.33.pth'
 
     if args.dataset == 'fss':
         if args.backbone == 'resnet50':
             if args.shot == 1:
-                checkpoint_path = './outdir/PMN/fss/train/resnet50_1shot_avg_74.50.pth'
+                checkpoint_path = './outdir/PMN/fss/train/resnet50_1shot_avg_74.90.pth'
             if args.shot == 5:
-                checkpoint_path = './outdir/PMN/fss/train/resnet50_5shot_avg_75.84.pth'
+                checkpoint_path = './outdir/PMN/fss/train/resnet50_5shot_avg_77.12.pth'
 
     miou = 0
     save_path = './outdir/PMN/%s/fine_tuning' % (args.dataset)
