@@ -4,10 +4,8 @@ import os
 from torch.utils.data import Dataset
 import torch.nn.functional as F
 import torch
+import PIL.Image as Image
 import numpy as np
-from PIL import Image, ImageEnhance
-import random
-
 
 
 class DatasetPASCAL(Dataset):
@@ -38,7 +36,6 @@ class DatasetPASCAL(Dataset):
         query_img, query_cmask, support_imgs, support_cmasks, org_qry_imsize = self.load_frame(query_name, support_names)
 
         query_img = self.transform(query_img)
-
         query_cmask = F.interpolate(query_cmask.unsqueeze(0).unsqueeze(0).float(), query_img.size()[-2:], mode='nearest').squeeze()
         query_mask, query_ignore_idx = self.extract_ignore_idx(query_cmask.long(), class_sample)
 

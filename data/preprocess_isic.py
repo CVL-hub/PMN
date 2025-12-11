@@ -2,8 +2,8 @@ import csv
 import os
 from shutil import copy
 
-ImgPath = '/home/ranwanwu/CDFSS/dataset/ISIC2018/ISIC2018_Task1-2_Training_Input'
-AnnPath = '/home/ranwanwu/CDFSS/dataset/ISIC2018/ISIC2018_Task1_Training_GroundTruth'
+ImgPath = '../dataset/ISIC/ISIC2018_Task1-2_Training_Input'
+AnnPath = '../dataset/ISIC/ISIC2018_Task1_Training_GroundTruth'
 
 
 with open('./isic/class_id.csv', encoding='utf-8-sig') as f:

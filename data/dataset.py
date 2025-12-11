@@ -21,12 +21,10 @@ class FSSDataset:
 
         cls.datasets = {
             'pascal': DatasetPASCAL,
-
             'fss': DatasetFSS,
             'deepglobe': DatasetDeepglobe,
             'isic': DatasetISIC,
             'lung': DatasetLung,
-
             'deepglobeifa': DatasetDeepglobeIFA,
             'isicifa': DatasetISICIFA,
             'lungifa': DatasetLungIFA,
@@ -39,8 +37,7 @@ class FSSDataset:
 
         cls.transform = transforms.Compose([transforms.Resize(size=(img_size, img_size)),
                                             transforms.ToTensor(),
-                                            transforms.Normalize(cls.img_mean, cls.img_std)]
-                                           )
+                                            transforms.Normalize(cls.img_mean, cls.img_std)])
 
     @classmethod
     def build_dataloader(cls, benchmark, bsz, nworker, fold, split, shot=1):

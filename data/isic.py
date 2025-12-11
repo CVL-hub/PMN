@@ -16,7 +16,7 @@ class DatasetISIC(Dataset):
         self.shot = shot
         self.num = num
 
-        self.base_path = os.path.join(datapath, 'ISIC2018')
+        self.base_path = os.path.join(datapath, 'ISIC')
         self.categories = ['1','2','3']
 
         self.class_ids = range(0, 3)

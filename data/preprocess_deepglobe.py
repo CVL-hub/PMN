@@ -10,8 +10,8 @@ from PIL import Image
 ################################################################
 # step 1: cut the big image and mask into smaller one
 ################################################################
-
-PATH = '/home/ranwanwu/CDFSS/dataset/Deepglobe/'
+'''
+PATH = '../dataset/Deepglobe/'
 PATH_TO_DATA = os.path.join(PATH, '01_train_ori/')
 PATH_TO_IMAGE = os.path.join(PATH, '02_train_crop/')
 PATH_TO_LABEL = os.path.join(PATH, '02_train_crop/')
@@ -47,7 +47,7 @@ for f in os.listdir(PATH_TO_DATA):
 # step 2: filter single color mask and foreground percent small than 0.048
 ############################################################################
 
-PATH = '/home/ranwanwu/CDFSS/dataset/Deepglobe/'
+PATH = '../dataset/Deepglobe/'
 PATH_TO_DATA = os.path.join(PATH, '02_train_crop/')
 PATH_TO_FILTER_DATA = os.path.join(PATH, '03_train_filter/')
 
@@ -80,17 +80,17 @@ def GetBinaryMap(img, label):
     mask = np.ones((img.shape))
     isnull = 1
     for j in range(len(img)):
-        for k in range(len(img)):
-            if (img[j][k].tolist() == labelset[label]):
-                mask[j][k] = [255, 255, 255]
+        for supp_local_proto in range(len(img)):
+            if (img[j][supp_local_proto].tolist() == labelset[label]):
+                mask[j][supp_local_proto] = [255, 255, 255]
                 isnull = 0
             else:
-                mask[j][k] = [0, 0, 0]
+                mask[j][supp_local_proto] = [0, 0, 0]
     return isnull, mask
 
 # list all files under the folder
 
-PATH = '/home/ranwanwu/CDFSS/dataset/Deepglobe/'
+PATH = '../dataset/Deepglobe/'
 oridir = os.path.join(PATH, '03_train_filter/')
 masklist = os.listdir(oridir)
 desdir = os.path.join(PATH, '04_train_cat/')
@@ -114,12 +114,13 @@ for label in range(0, 6):
         file.write('\n')
     file.close()
 
+'''
 
 ############################################################################
 # step 4: copy corresponding images of each mask
 ############################################################################
 
-PATH = '/home/ranwanwu/CDFSS/dataset/Deepglobe/'
+PATH = '../dataset/Deepglobe/'
 PATH_TO_IMG = os.path.join(PATH, '02_train_crop/')
 PATH_TO_MSK = os.path.join(PATH, '04_train_cat/')
 
