@@ -71,7 +71,6 @@ def evaluate(model, dataloader, args):
 
 def main():
     path_dir = 'ifa'
-
     args = parse_args()
     print('\n' + str(args))
 
